@@ -1,3 +1,4 @@
+# import libraries
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -32,42 +33,9 @@ from skmultiflow.meta import OnlineAdaC2Classifier
 from skmultiflow.data import AGRAWALGenerator
 
 #-----------------------------------------------------------------------------------------------------------------------------------------------
-#def compute_bounds(p_hat, decay, n, alpha, n_sim=1000):
-    #bernoulli_samples = bernoulli.rvs(p_hat, size=n * n_sim).reshape(n_sim, n)
-    # TODO: Check if shapes match
-    ##empirical_bounds = (1 - decay) * (bernoulli_samples * (n - np.arange(1, n + 1))).sum(axis=1)
-    #empirical_bounds = (1 - decay) * np.matmul(bernoulli_samples, decay ** (n - np.arange(1, n + 1)).reshape(n, 1)).sum(axis=1)
-    #lb, ub = np.percentile(empirical_bounds, q=[alpha * 100, (1 - alpha) * 100])
-    #return lb, ub
-#def find_nearest(array, value):
-    #idx = np.searchsorted(array, value, side='left')
-    #if idx > 0 and (idx == len(array) or math.fabs(value - array[idx-1]) < math.fabs(value - array[idx])):
-        #return array[idx-1]
-    #else:
-        #return array[idx]
 
-"""
-class BoundsTable(object):
-    def __init__(self, decay, alpha_range, p_hat_range, n_range, n_sim=1000):
-        self.decay = decay
-        self.alpha_range = alpha_range
-        self.p_hat_range = p_hat_range
-        self.n_range = n_range
-        self.n_sim = n_sim
-        self.bounds_table = {}
-    def compute_bounds_table(self, rng_seed=123321):
-        np.random.seed(rng_seed)
-        grid = itertools.product(self.p_hat_range, self.n_range, self.alpha_range)
-        # TODO: Is it safe to store dictionary keys as floating point values?
-        self.bounds_table = {(p, n, alpha): compute_bounds(p_hat=p, alpha=alpha, decay=self.decay, n=n, n_sim=self.n_sim)
-                             for (p, n, alpha) in grid}
-        return self
-    def lookup_bounds(self, p, n, alpha):
-        # We assume here that n and alpha can be exactly matched
-        p_nearest = find_nearest(self.p_hat_range, p)
-        return self.bounds_table[(p_nearest, n, alpha)]
-#---------------------------------------------------------------------------------------------------------------------------------------------------
-"""
+
+
 class Potential_drift_detection:
 	def __init__(self,T_pot=0):
 		self.count=0
@@ -94,15 +62,8 @@ class Potential_drift_detection:
 		self.iteration=300
 		self.train_on=2000
 		self.no_of_drifts=0
-	#------------------------------------------------------------------------------------------------------------------------------------------
-	#def _compute_bounds_table(self, n_samples, rng_seed=123321):
-        #alpha_range = np.array([self.warn_level, self.detect_level])
-        #p_hat_range = np.arange(1, 100) / 100.0
-        #n_range = np.arange(2, n_samples + 1)
-        #self.bounds_table = BoundsTable(self.decay, alpha_range, p_hat_range, n_range, n_sim=self.n_sim)
-        #self.bounds_table.compute_bounds_table(rng_seed=rng_seed)
-		#return self.bounds_table
-	#-------------------------------------------------------------------------------------------------------------------------------------------
+	
+	
 	def bound_table(self,P,eta,delta,n):
 		alpha=delta
 		sum=0
@@ -249,21 +210,7 @@ class Potential_drift_detection:
 				detect_bd_lb[x],detect_bd_ub[x]=self.bound_table(temp2,self.eta[x],.01,N[x])
 				#print("detect_bd:",temp[x],"::",detect_bd[x])
 				
-				#------------------------------------------------------------------------------------------------------------------
-				#lb_warn, ub_warn = self.bounds_table.lookup_bounds(p=p_hat, n=n, alpha=self.warn_level)
-                #lb_detect, ub_detect = self.bounds_table.lookup_bounds(p=p_hat, n=n, alpha=self.detect_level)
-				#------------------------------------------------------------------------------------------------------------------
-			#if((self.R[t][x]>warn_bd[x] for x in self.astrick) and warn_time==0):
-			#	warn_time=t
-			#elif( self.R[t][x]<= warn_bd[x] for x in self.astrick):
-			#	warn_time=0
-			
-			#for x in self.astrick:
-			#	if((self.R[t][x]>warn_bd[x]) and warn_time==0):
-			#		warn_time=t
-			#		break
-			#	elif(self.R[t][x]<=warn_bd[x]):
-			#		warn_time=0
+				
 			
 			temp3=0
 			for x in self.astrick:
