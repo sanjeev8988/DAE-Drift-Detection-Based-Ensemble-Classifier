@@ -29,3 +29,6 @@ While the adaptive classifier demonstrates strong performance, I plan to explore
 
 **Conclusion**
 This adaptive ensemble classifier project addresses the limitations of traditional sentiment analysis models in online environments. By integrating ensemble learning with adaptive mechanisms, the model can sustain high accuracy and relevance in the face of rapidly changing data, making it a powerful tool for real-time sentiment analysis and opinion mining. This project establishes a foundation for further exploration of adaptive machine learning models for sentiment analysis in dynamic contexts.
+
+Programming Language: Python
+Library used: Scikit-learn
