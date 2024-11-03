@@ -1,3 +1,5 @@
+**About Project**
+
 In this project, I developed an adaptive ensemble classifier designed for online sentiment analysis and opinion mining. The purpose of this classifier is to handle the challenges of dynamic, real-time data environments, where trends and user opinions shift frequently. In settings like social media and e-commerce, traditional sentiment analysis models tend to underperform over time due to concept drift, which occurs when the statistical properties of the data change. My adaptive classifier addresses this issue, maintaining high accuracy and relevance by adapting its model configuration as new data arrives.
 
 **Project Overview**
@@ -51,3 +53,7 @@ This adaptive ensemble classifier project addresses the limitations of tradition
   5. numpy
   6. matplotlib
   7. seaborn
+
+**Published Article:**
+
+•	Sanjeev Kumar, Ravendra Singh, Mohammad Zubair Khan, Abdulfattah Noorwali, “Design of Adaptive Ensemble Classifier for Online Sentiment Analysis and Opinion Mining”, PeerJ Computer Science (Published), ISSN 2376-5992, 2021, (SCIE Indexed, Scopus Indexed), 
