@@ -59,3 +59,17 @@ This adaptive ensemble classifier project addresses the limitations of tradition
 **Published Article:**
 
 •	Sanjeev Kumar, Ravendra Singh, Mohammad Zubair Khan, Abdulfattah Noorwali, **“Design of Adaptive Ensemble Classifier for Online Sentiment Analysis and Opinion Mining”**, PeerJ Computer Science (Published), ISSN 2376-5992, 2021, (SCIE Indexed, Scopus Indexed), 
+
+**Results**
+
+![image](https://github.com/user-attachments/assets/5f4e6d70-215b-4b41-9106-ef603fbb93a4)
+![image](https://github.com/user-attachments/assets/9211b509-918a-48f9-951f-5ff69b91ce27)
+![image](https://github.com/user-attachments/assets/2a1a9730-8046-428b-9454-79b14bbb6e35)
+![image](https://github.com/user-attachments/assets/ae8d2577-f2e2-42a3-a429-9b963e5bc3c5)
+![image](https://github.com/user-attachments/assets/84f5bb05-3bdb-47c8-ac4a-91ee196c8eb8)
+![image](https://github.com/user-attachments/assets/204036c5-7559-4cb0-b6ad-70a77cf12bb9)
+
+
+
+
+
